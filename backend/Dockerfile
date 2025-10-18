@@ -3,21 +3,20 @@ FROM node:18
 
 WORKDIR /app
 
-# Copy package files and install dependencies
 COPY package*.json ./
 RUN npm install
 
-# Copy source code
 COPY . .
 
-# ✅ Replace localhost with 0.0.0.0 to allow external connections
-RUN find . -type f -name "*.js" -exec sed -i 's/localhost/0.0.0.0/g' {} +
+# ✅ Automatically replace localhost and update port from 3000 to 3011
+RUN find . -type f -name "*.js" -exec sed -i 's/localhost/0.0.0.0/g' {} + && \
+    find . -type f -name "*.js" -exec sed -i 's/3000/3175/g' {} +
 
-# Expose backend port
+# ✅ Expose the new backend port
 EXPOSE 3175
 
-# Environment variable for Node.js server
+# ✅ Set environment variable for Node.js
 ENV PORT=3175
 
-# Start backend
+# ✅ Start backend server
 CMD ["node", "server.js"]
