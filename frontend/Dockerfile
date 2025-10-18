@@ -11,7 +11,7 @@ RUN npm install
 COPY . .
 
 # ✅ Replace localhost:3000 with your backend IP:3175 (if needed)
-RUN find src public -type f -exec sed -i 's/localhost:5173/52.64.85.12:5175/g' {} +
+RUN find . -type f -exec sed -i 's/localhost:5173/52.64.85.12:5175/g' {} + || true+
 
 # ✅ Build the app
 RUN npm run build
