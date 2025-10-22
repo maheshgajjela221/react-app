@@ -3,7 +3,7 @@ version: "3.9"
 services:
   backend:
     build: ./backend
-    container_name: app-frontend
+    container_name: app-backend
     ports:
       - "3175:3175"
     restart: always
