@@ -3,14 +3,14 @@ version: "3.9"
 services:
   backend:
     build: ./backend
-    container_name: react-backend
+    container_name: app-frontend
     ports:
       - "3175:3175"
     restart: always
 
   frontend:
     build: ./frontend
-    container_name: react-frontend
+    container_name: app-backend
     ports:
       - "5175:5175"
     depends_on:
