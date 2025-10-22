@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div style={{ textAlign: "center", marginTop: "100px" }}>
-      <h1>React + Node.js (Vite) Example</h1>
+      <h1>my visys family</h1>
       <Message text={msg} />
     </div>
   );
