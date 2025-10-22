@@ -10,7 +10,7 @@ services:
 
   frontend:
     build: ./frontend
-    container_name: app-backend
+    container_name: app-frontend
     ports:
       - "5175:5175"
     depends_on:
