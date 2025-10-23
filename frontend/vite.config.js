@@ -7,7 +7,7 @@ export default defineConfig({
     host: "0.0.0.0",      // 👈 Allows external access
     port: 5175,
     proxy: {
-      "/api": "http://52.64.85.12:3175", // backend API
+      "/api": "http://3.106.196.201:3175", // backend API
     },
   },
 });
