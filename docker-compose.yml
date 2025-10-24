@@ -17,6 +17,9 @@ services:
       - backend
     restart: always
 
-  
+networks:
+  default:
+    external: true
+    name: apps_net
 
   
