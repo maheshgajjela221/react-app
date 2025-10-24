@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div style={{ textAlign: "center", marginTop: "100px" }}>
-      <h1> mydevops family</h1>
+      <h1> hi team this devops</h1>
       <Message text={msg} />
     </div>
   );
